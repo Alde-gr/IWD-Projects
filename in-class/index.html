@@ -1,0 +1,53 @@
+<!-- ACTIVITY 2
+<h1>Welcome to my first HTML page</h1>
+<p>I am studying at the University of Suffolk.</p> -->
+
+<!-- ACTIVITY 3 -->
+<DOCTYPE html>
+    <html>
+        <head>
+            <!-- Sets the name on the tab -->
+            <meta charset="utf-8"/>
+            <title>Global News</title>
+            <!-- ACTIVITY 5 (A5) 
+            This can be used to change the font of the webpage -->
+            <script src="https://cdn.tailwindcss.com"></script>
+            <!-- ACTVITY 7 (A7) -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="./css/styles.css"/>
+            <!-- ACTIVITY 8 (A8) -->
+            <script src="https://kit.fontawesome.com/88a54f208d.js" crossorigin="anonymous"></script>
+        </head>
+        <body>
+            <!-- This is the body of text within the website itself-->
+            <p>Hello World!</p>
+            <!-- ACTIVITY 6 (A6)
+            This sets up the header of the current website -->
+            <nav class="bg-gray-100 border-b border-gray-300">
+                <div class="container mx-auto px-4 flex items-center gap-4 py-2">
+                    <!-- A7 added "brand-link" in the a class segment below -->
+                    <a class="text-xl font-semibold text-gray-800 brand-link" href="index.html">Global News Website</a>
+                    <!-- A8 -->
+                    <a class="text-l text-gray-800 brand-link hover:text-blue-600" href=""><i class="fa-solid fa-house"></i>Home</a>
+                    <a class="text-l text-gray-800 brand-link hover:text-blue-600" href=""><i class="fa-solid fa-person-running"></i>Sports</a>
+                    <a class="text-l text-gray-800 brand-link hover:text-blue-600" href=""><i class="fa-solid fa-book"></i>Education</a>
+                    <a class="text-l text-gray-800 brand-link hover:text-blue-600" href=""><i class="fa-solid fa-gamepad"></i>Gaming</a>
+                    <button class="md:hidden items-center p-2 rounded text-gray-800 hover:bg-gray-200 ml-auto" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+            <!-- A5 CONT.
+            This creates a sub division that better can be used to explain what the websites purpose is -->
+            <div class="container mx-auto px-4 py-4">
+                <!-- Acts as a title for the webpage-->
+                <h1 class="text-3xl font-bold">Welcome to Global News!</h1>
+                <!-- Text in the HTML code will appear in the same order on the HTML page
+                Acts as sub-text-->
+                <p class="mt-4">This is a website that will display news from across the globe</p>
+            </div>
+        </body>
+    </html>
+</DOCTYPE>
