@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" 
+            content="width=device-width, initial-scale=1.0">
+        <title>Stylish Forms</title>
+         <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/TailwindForm.css"/>
+    </head>
+    <body>
+        <!-- ACTIVITY 11 -->
+        <div class="box-border border-4 flex-wrap rounded-3xl border-grey-300 h-screen flex items-center justify-center container mx-auto px-9 py-8 pr-8">
+            <form>
+                <div class="name-section">
+                    <label>Name</label>
+                    <input type="text" name="fullname"/>
+                </div>
+                <div class="age-section">
+                    <label>Age</label>
+                    <input type="number" name="age"/>
+                </div>
+                <div class="lang-section">
+                    <label>Language</label>
+                    <select name="lang">
+                    <option value="en">English</option>
+                    </select>
+                </div>
+                    <div class="bio-section">
+                    <label>Bio</label>
+                    <textarea name="bio"></textarea>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
