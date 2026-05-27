@@ -17,11 +17,9 @@
                     <div class="container mx-auto px-4 gap-4 py-2">
                         <a class="text-xl font-semibold text-gray-800 brand-link pl-70 hover:scale-110 hover:tracking-wider transition-all" href="index.html">TV Time</a>
                     </div>
-                    <div class="container mx-auto px-4 text-right md:gap-4 py-2">
-                        <button class="md:hidden items-center p-2 rounded text-gray-800 hover:bg-gray-200 ml-auto" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                    </div>
+                    <button class="md:hidden items-center p-2 rounded text-gray-800 hover:bg-gray-200 ml-auto" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
                     <div class="hidden md:block container mx-auto px-4 text-right md:gap-4 py-2">
                         <a class="text-l font-semibold text-gray-800 brand-link px-4 py-2 md:py-0 hover:text-blue-600" href="tv.html"><i class="fa-solid fa-film"></i>Shows</a>
                         <a class="text-l font-semibold text-gray-800 brand-link px-4 py-2 md:py-0 hover:text-blue-600" href=""><i class="fa-solid fa-user"></i>Actors</a>
@@ -40,12 +38,16 @@
                     </button>
                 </div>
             </form>
-            <div class="" id="nextButton">
-                <div class="" id="previousButton">
+            <div class="">
+                <div class="">
                     <div class="grid grid-cols-1 lg:grid-cols-4 gap-3 py-4 text-center" id="results" onSubmit="showShows()">
-                        
+
                     </div>
                 </div>
+            </div>
+            <div class="flex gap-6 m-6">
+                <button class="container mx-auto rounded-full bg-sky-200 p-6 text-center" onclick="previousButton()" id="prev">Prev</button>
+                <button class="container mx-auto rounded-full bg-sky-200 p-6 text-center" onclick="nextButton()">Next</button>
             </div>
             <script src="../js/tv.js"></script>
         </body>

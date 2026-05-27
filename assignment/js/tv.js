@@ -1,11 +1,12 @@
-   var currentPage = 0;
+var currentPage = 0;
+const resultList = document.querySelector('#results');
+document.getElementById('prev').disabled = true
 
 const searchTV = (value) => {
 
     event.preventDefault();
     const keyword = document.querySelector('#keyword').value;
     const url="https://api.tvmaze.com/search/shows?q=";
-    const resultList = document.querySelector('#results');
     resultList.innerHTML="";
     if (keyword == "") {
         showShows();
@@ -14,6 +15,9 @@ const searchTV = (value) => {
     fetch (url +  keyword)
         .then((response) => response.json())
         .then((data) => {
+            if (data.length === 0) {
+                resultList.innerHTML = "<p class = 'col-span-full mx-auto text-grey-800 p-4'>No results found</p>"
+            }
         data.forEach(function (value) {
         const articleElement = 
         `<div>
@@ -33,7 +37,7 @@ const searchTV = (value) => {
 };
 
 function showShows() {
-        const url="https://api.tvmaze.com/shows?page=1";
+        const url="https://api.tvmaze.com/shows?page=" + currentPage.toString();
         const resultList = document.querySelector('#results');
 
         fetch (url)
@@ -56,5 +60,23 @@ function showShows() {
         });
     });
 };
+
+function previousButton() {
+    currentPage -= 1;
+    if (currentPage == 0) {
+        document.getElementById('prev').disabled = true;
+    }
+    resultList.innerHTML="";
+    showShows();
+}
+
+function nextButton() {
+currentPage += 1;
+    if (currentPage > 0) {
+        document.getElementById('prev').disabled = false;
+    }
+    resultList.innerHTML="";
+    showShows();
+}
 
 showShows();
