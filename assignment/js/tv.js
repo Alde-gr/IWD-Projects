@@ -45,7 +45,7 @@ function showShows() {
                 <div class="bg-white rounded shadow border-2 p-4 mb-4">
                     <img class="mx-auto" src="${value.image?.medium ?? "https://dummyimage.com/210x295/cccccc/000000&text=No+Image"}">
                     <h5 class="text-lg font-semibold mb-2">${value.name}</h5>
-                    <p class="text-gray-600 mb-3">${value.show.rating.average ?? "N/A"}</p>
+                    <p class="text-gray-600 mb-3">${value.rating.average ?? "N/A"}</p>
                     <a target="_blank" href="${value.url}" class="inline-block
                     bg-sky-300 text-gray-800 px-4 py-2 rounded hover:bg-blue-600">
                     View Article
