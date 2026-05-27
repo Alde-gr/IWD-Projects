@@ -15,55 +15,38 @@
             <div class="p-4">
                 <nav class="container mx-auto flex rounded-full bg-sky-200 p-3">
                     <div class="container mx-auto px-4 gap-4 py-2">
-                        <a class="text-xl font-semibold text-gray-800 brand-link pl-70" href="index.html">TV Time</a>
+                        <a class="text-xl font-semibold text-gray-800 brand-link pl-70 hover:scale-110 hover:tracking-wider transition-all" href="index.html">TV Time</a>
                     </div>
-                    <div class="container mx-auto px-4 text-right gap-4 py-2">
-                        <a class="text-l font-semibold text-gray-800 brand-link px-4" href="tv.html"><i class="fa-solid fa-film"></i>Shows</a>
-                        <a class="text-l font-semibold text-gray-800 brand-link px-4" href=""><i class="fa-solid fa-user"></i>Actors</a>
+                    <div class="container mx-auto px-4 text-right md:gap-4 py-2">
+                        <button class="md:hidden items-center p-2 rounded text-gray-800 hover:bg-gray-200 ml-auto" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="hidden md:block container mx-auto px-4 text-right md:gap-4 py-2">
+                        <a class="text-l font-semibold text-gray-800 brand-link px-4 py-2 md:py-0 hover:text-blue-600" href="tv.html"><i class="fa-solid fa-film"></i>Shows</a>
+                        <a class="text-l font-semibold text-gray-800 brand-link px-4 py-2 md:py-0 hover:text-blue-600" href=""><i class="fa-solid fa-user"></i>Actors</a>
                     </div>
                 </nav>
             </div>
             <nav class="container mx-auto items-center">
-                <h1 class="text-center font-bold text-xl text-gray-800">Welcome to TV Time</h1>
-                <p class="text-base text-gray-800 text-center">TV Shows and Actors at a click of your mouse!</p>
-                <!--
-                <div class="searchBox">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input class="rounded-full font-semibold text-gray-800 bg-sky-50 px-4" type="text" placeholder="Search" name="Search"/>
-                </div>
-                -->
+                <h1 class="text-center font-bold text-xl text-gray-800">Shows</h1>
+                <p class="text-base text-gray-800 text-center">Browse through shows or search for fan-favourites!</p>
             </nav>
-            <div id="default-carousel" class="relative w-full" data-carousel="slide">
-                <div class="container mx-auto px-5 py-5">
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 text-center mt-4">
-                        <div class="place-items-center text-center flex flex-col items-center">
-                            <img class="mb-3" src="../html/images/210x315.jpg" width="210" height="315">
-                            <h2 class="text-2xl font-semibold">Film Title</h2>
-                            <p>Genre</p>
-                        </div>
-                        <div class="place-items-center text-center flex flex-col items-center">
-                            <img class="mb-3" src="../html/images/210x315.jpg" width="210" height="315">
-                            <h2 class="text-2xl font-semibold">Film Title</h2>
-                            <p>Genre</p>
-                        </div>
-                        <div class="place-items-center text-center flex flex-col items-center">
-                            <img class="mb-3" src="../html/images/210x315.jpg" width="210" height="315">
-                            <h2 class="text-2xl font-semibold">Film Title</h2>
-                            <p>Genre</p>
-                        </div>
-                        <div class="place-items-center text-center flex flex-col items-center">
-                            <img class="mb-3" src="../html/images/210x315.jpg" width="210" height="315">
-                            <h2 class="text-2xl font-semibold">Film Title</h2>
-                            <p>Genre</p>
-                        </div>
-                        <div class="place-items-center text-center flex flex-col items-center">
-                            <img class="mb-3" src="../html/images/210x315.jpg" width="210" height="315">
-                            <h2 class="text-2xl font-semibold">Film Title</h2>
-                            <p>Genre</p>
-                        </div>
+            <form id="search-form" class ="mx-auto w-full mt-4 px-4 md:w-3/4 lg:w-1/2" onSubmit="searchTV(event)">
+                <div class="grid grid-cols-1 gap-2 sm:grid-cols-9 sm:gap-0">
+                    <input class="sm:col-span-8 rounded-full font-semibold text-gray-800 bg-sky-100 px-4 w-full h-full sm:rounded-l-full sm:rounded-r-none" type="text" placeholder="Search" name="Search" id="keyword"/>
+                    <button class="h-full w-full rounded-full bg-sky-200 sm:rounded-r-full sm:rounded-l-none">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </form>
+            <div class="" id="nextButton">
+                <div class="" id="previousButton">
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-3 py-4 text-center" id="results" onSubmit="showShows()">
                     </div>
                 </div>
             </div>
+            <script src="../js/tv.js"></script>
         </body>
     </html>
 </DOCTYPE>
