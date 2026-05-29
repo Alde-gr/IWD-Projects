@@ -22,10 +22,10 @@ const searchActors = (value) => {
         const articleElement = 
         `<div>
             <div class="bg-white rounded shadow border-2 p-4 mb-4">
-                <img class="mx-auto" src="${value.people.image?.medium ?? "https://dummyimage.com/210x295/cccccc/000000&text=No+Image"}">
-                <h5 class="text-lg font-semibold mb-2">${value.people.name}</h5>
-                <p class="text-gray-600 mb-3">${value.people.country ?? "N/A"}</p>
-                <a target="_blank" href="${value.people.url}" class="inline-block
+                <img class="mx-auto" src="${value.image?.medium ?? "https://dummyimage.com/210x295/cccccc/000000&text=Image+Not+Found"}">
+                <h5 class="text-lg font-semibold mb-2">${value.person.name}</h5>
+                <p class="text-gray-600 mb-3">${value.person.country ?? "N/A"}</p>
+                <a target="_blank" href="${value.person.url}" class="inline-block
                 bg-sky-300 text-gray-800 px-4 py-2 rounded hover:bg-blue-600">
                 View Article
                 </a>
@@ -47,15 +47,15 @@ function showActors() {
             const articleElement = 
             `<div>
                 <div class="bg-white rounded shadow border-2 p-4 mb-4">
-                    <img class="mx-auto" src="${value.people.image?.medium ?? "https://dummyimage.com/210x295/cccccc/000000&text=No+Image"}">
-                    <h5 class="text-lg font-semibold mb-2">${value.people.name}</h5>
-                    <p class="text-gray-600 mb-3">${value.people.country ?? "N/A"}</p>
-                    <a target="_blank" href="${value.people.url}" class="inline-block
+                    <img class="mx-auto" src="${value.image?.medium ?? "https://dummyimage.com/210x295/cccccc/000000&text=Image+Not+Found"}">
+                    <h5 class="text-lg font-semibold mb-2">${value.name}</h5>
+                    <p class="text-gray-600 mb-3">${value.country.name ?? "N/A"}</p>
+                    <a target="_blank" href="${value.url}" class="inline-block
                     bg-sky-300 text-gray-800 px-4 py-2 rounded hover:bg-blue-600">
                     View Article
                     </a>
                 </div>
-             </div>`;
+            </div>`;
             resultList.insertAdjacentHTML('beforeend', articleElement);
         });
     });
@@ -79,4 +79,4 @@ currentPage += 1;
     showActors();
 }
 
-showShows();
+showActors();
