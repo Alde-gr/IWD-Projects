@@ -51,7 +51,7 @@ function showShows() {
                     <h5 class="text-lg font-semibold mb-2">${value.name}</h5>
                     <p class="text-gray-600 mb-3">${value.rating.average ?? "N/A"}</p>
                     <a target="_blank" href="${value.url}" class="inline-block
-                    bg-sky-300 text-gray-800 px-4 py-2 rounded hover:bg-blue-600">
+                    bg-sky-200 text-gray-800 px-4 py-2 rounded hover:bg-sky-300">
                     View Article
                     </a>
                 </div>
